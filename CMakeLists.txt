@@ -6,6 +6,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 
 # Specify the libraries and headers directory
+# TODO(wesly): Please adjust with your system configuration 
 include_directories(
     "/opt/OpenDDS/OpenDDS-3.29.1"
     "/opt/OpenDDS/OpenDDS-3.29.1/ACE_wrappers"
