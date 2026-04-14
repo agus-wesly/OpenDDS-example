@@ -1,0 +1,16 @@
+module Try {
+    enum Color {
+        RED,
+        GREEN,
+        BLUE
+    };
+
+    @topic
+        struct Foo {
+            string<256> bazz;
+            double temp;
+            long values[5];
+            sequence<long> dynamic;
+            Color fav;
+        };
+};

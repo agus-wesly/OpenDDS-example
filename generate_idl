@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <FILE_NAME>"
+    exit 1
+fi
+
+# idl/Foo.idl
+# src/*.c, src/*.idl
+
+IDL_FILE_NAME="$1.idl"
+TYPE_SUPPORT_FILE_NAME="$1TypeSupport.idl"
+
+tao_idl -I "$DDS_ROOT" -Sa -St -Sm -Sci -in --idl-version 4 --unknown-annotations ignore -o src "$IDL_FILE_NAME"
+opendds_idl -Gxtypes-complete -o src "$IDL_FILE_NAME"
+mv src/*.idl idl/
+tao_idl -I "$DDS_ROOT" -I idl/ -Sa -St -Sm -Sci -in --idl-version 4 --unknown-annotations ignore -o src "$TYPE_SUPPORT_FILE_NAME"
+
+echo "Execution completed."
