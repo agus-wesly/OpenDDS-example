@@ -8,13 +8,13 @@ set(CMAKE_CXX_STANDARD 17)
 # Specify the libraries and headers directory
 # TODO(wesly): Please adjust with your system configuration 
 include_directories(
-    "/opt/OpenDDS/OpenDDS-3.29.1"
-    "/opt/OpenDDS/OpenDDS-3.29.1/ACE_wrappers"
-    "/opt/OpenDDS/OpenDDS-3.29.1/ACE_wrappers/TAO"
+    "/opt/OpenDDS-3.29.1"
+    "/opt/OpenDDS-3.29.1/ACE_wrappers"
+    "/opt/OpenDDS-3.29.1/ACE_wrappers/TAO"
 )
 link_directories(
-    "/opt/OpenDDS/OpenDDS-3.29.1/lib"
-    "/opt/OpenDDS/OpenDDS-3.29.1/ACE_wrappers/lib"
+    "/opt/OpenDDS-3.29.1/lib"
+    "/opt/OpenDDS-3.29.1/ACE_wrappers/lib"
 )
 
 # Specify the source code
